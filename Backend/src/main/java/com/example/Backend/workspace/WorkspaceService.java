@@ -10,9 +10,10 @@ import com.example.Backend.workspace.repository.WorkspaceRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
-
+import org.springframework.stereotype.Service;
 import java.util.List;
 
+@Service
 public class WorkspaceService {
     private final WorkspaceRepository workspaceRepository;
     private final UserRepository userRepository;
