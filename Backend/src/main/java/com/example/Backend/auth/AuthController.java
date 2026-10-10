@@ -20,13 +20,18 @@ public class AuthController {
 
 	@PostMapping("/register")
 	public String register(@Valid @RequestBody RegisterRequest request) {
+		System.out.println("this method has been called ---------------------------");
 		AuthResponse authResponse = authService.register(request);
+		System.out.println(authResponse.accessToken());
 		return authResponse.accessToken();
 	}
 
 	@PostMapping("/login")
 	public String login(@Valid @RequestBody LoginRequest request) {
+		System.out.println("this method has been called 2 ---------------------------");
+
 		AuthResponse authResponse = authService.login(request);
+		System.out.println(authResponse.accessToken());
 		return authResponse.accessToken();
 	}
 }

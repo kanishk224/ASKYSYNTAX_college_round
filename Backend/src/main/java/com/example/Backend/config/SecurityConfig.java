@@ -19,6 +19,7 @@ public class SecurityConfig {
 	SecurityFilterChain securityFilterChain(HttpSecurity http, JwtAuthenticationFilter jwtAuthenticationFilter)
 			throws Exception {
 		http
+				.cors(cors -> {})
 				.csrf(csrf -> csrf.disable())
 				.formLogin(form -> form.disable())
 				.httpBasic(basic -> basic.disable())
