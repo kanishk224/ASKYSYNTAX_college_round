@@ -1,4 +1,17 @@
 package com.example.Backend.workspace.dto;
 
-public class CreateWorkspaceRequest {
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
+public record CreateWorkspaceRequest(
+
+        @NotBlank(message = "Workspace name is required")
+        @Size(max = 100, message = "Workspace name cannot exceed 100 characters")
+        String name,
+
+        @Size(max = 500, message = "Description cannot exceed 500 characters")
+        String description
+
+) {
 }
