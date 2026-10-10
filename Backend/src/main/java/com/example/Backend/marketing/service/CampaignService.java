@@ -7,5 +7,9 @@ public class CampaignService {
     void yash2() {
         System.out.println("commit2");
     }
+    void yash3() {
+        System.out.println("commit3");
+    }
+
 
 }
