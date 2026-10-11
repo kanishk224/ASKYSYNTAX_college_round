@@ -10,6 +10,9 @@ public class CampaignService {
     void yash3() {
         System.out.println("commit3");
     }
+    void yash4() {
+        System.out.println("commit4");
+    }
 
 
 }
